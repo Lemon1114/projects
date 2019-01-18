@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .box:first-child {/*div.box是第一个class为box的元素，颜色设置为红色*/
+            color: red;
+        }
+        .box:first-of-type {/*选中class为box的父元素的同种元素的第一个元素，div.box是第一个class为box的div元素和p.box是第一个class为box的p元素背景变为蓝色*/
+            background: blue;
+        }
+        .box :first-child {/*选中class为box的后代元素中第一个子元素，div.item是父元素class为box的第一个子元素*/
+            font-size: 30px;
+        }
+        .box :first-of-type {/*class为box的父元素的后代元素中，同种元素的第一个元素，div.item和p.item的父元素class是box，div.item是父元素下第一个div元素，p.item是父元素下第一个p元素*/
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">div.box</div>
+    <p class="box">p.box</p>
+    <div class="box">div.box</div>
+    <div class="box">
+        <div class="item">div.item</div>
+        <p class="item">p.item</p>
+    </div>
+    <p class="box"></p>
+</div>
+</body>
+</html>
