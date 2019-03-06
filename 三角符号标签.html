@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三角符号标签</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .messagebox {
+        border: 2px solid #999;
+        display: inline-block;
+        width: 150px;
+        height: 60px;
+        position: relative;
+        margin: 40px;
+        /*border-radius: 5px;*/
+    }
+    .messagebox:before {
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        display: inline-block;
+        content: "";
+    }
+    .grey:before{
+        width: 0;
+        height: 0;
+        border-width: 15px;
+        border-style: solid;
+        border-color: transparent transparent grey transparent;
+        /*transform: rotateZ(45deg);*/
+        position: absolute;
+        top:-31px;
+        left: 10px;
+    }
+    .red:before{
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color:  #900b09 #900b09 transparent transparent;
+        /*background-color: #900b09;*/
+        /*transform: rotateZ(45deg);*/
+        position: absolute;
+        top:-1px;
+        left: 131px;
+    }
+    .caret:before{
+        border-left: 2px solid #999;
+        border-top: 2px solid #999;
+        transform: rotateZ(45deg);
+        position: absolute;
+        top:-12px;
+        left: 10px;
+    }
+</style>
+<body>
+<div class="messagebox grey"></div>
+<br>
+<div class="messagebox red"></div>
+<br>
+<div class="messagebox caret"></div>
+</body>
+</html>
